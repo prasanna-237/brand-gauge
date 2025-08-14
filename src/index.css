@@ -2,41 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* SentimentAI Monitor Design System - Dark Theme with Purple/Teal Gradients */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark theme base colors */
+    --background: 220 13% 9%;
+    --foreground: 220 9% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card colors for dark theme */
+    --card: 220 13% 12%;
+    --card-foreground: 220 9% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover colors */
+    --popover: 220 13% 12%;
+    --popover-foreground: 220 9% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand colors - Purple to Teal gradient */
+    --primary: 270 78% 68%;
+    --primary-foreground: 220 9% 95%;
+    --primary-glow: 270 78% 75%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary accent - Teal */
+    --secondary: 180 78% 55%;
+    --secondary-foreground: 220 13% 9%;
+    --secondary-glow: 180 78% 65%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted colors for subtle elements */
+    --muted: 220 13% 16%;
+    --muted-foreground: 220 9% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent colors */
+    --accent: 220 13% 16%;
+    --accent-foreground: 220 9% 95%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Status colors */
+    --positive: 142 76% 45%;
+    --positive-foreground: 220 9% 95%;
+    --negative: 0 84% 60%;
+    --negative-foreground: 220 9% 95%;
+    --mixed: 45 93% 55%;
+    --mixed-foreground: 220 13% 9%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 9% 95%;
 
-    --radius: 0.5rem;
+    /* Borders and inputs */
+    --border: 220 13% 20%;
+    --input: 220 13% 16%;
+    --ring: 270 78% 68%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 78% 68%), hsl(180 78% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(220 13% 12%), hsl(220 13% 14%));
+    --gradient-search: linear-gradient(135deg, hsl(270 78% 68%), hsl(180 78% 55%));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(270 78% 68% / 0.3);
+    --shadow-card: 0 8px 32px hsl(220 13% 4% / 0.5);
+    --shadow-search: 0 0 60px hsl(270 78% 68% / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
