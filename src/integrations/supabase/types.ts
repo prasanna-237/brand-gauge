@@ -149,8 +149,11 @@ export type Database = {
       brands: {
         Row: {
           created_at: string
+          description: string | null
           id: string
           is_active: boolean | null
+          keywords: string[] | null
+          logo_url: string | null
           name: string
           notification_email: string | null
           telegram_chat_id: string | null
@@ -159,8 +162,11 @@ export type Database = {
         }
         Insert: {
           created_at?: string
+          description?: string | null
           id?: string
           is_active?: boolean | null
+          keywords?: string[] | null
+          logo_url?: string | null
           name: string
           notification_email?: string | null
           telegram_chat_id?: string | null
@@ -169,8 +175,11 @@ export type Database = {
         }
         Update: {
           created_at?: string
+          description?: string | null
           id?: string
           is_active?: boolean | null
+          keywords?: string[] | null
+          logo_url?: string | null
           name?: string
           notification_email?: string | null
           telegram_chat_id?: string | null
@@ -178,6 +187,44 @@ export type Database = {
           updated_at?: string
         }
         Relationships: []
+      }
+      monitoring_sessions: {
+        Row: {
+          brand_id: string
+          created_at: string
+          id: string
+          last_checked_at: string | null
+          started_at: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          brand_id: string
+          created_at?: string
+          id?: string
+          last_checked_at?: string | null
+          started_at?: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          brand_id?: string
+          created_at?: string
+          id?: string
+          last_checked_at?: string | null
+          started_at?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "monitoring_sessions_brand_id_fkey"
+            columns: ["brand_id"]
+            isOneToOne: false
+            referencedRelation: "brands"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       sentiment_data: {
         Row: {
